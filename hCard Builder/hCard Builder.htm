@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<!-- saved from url=(0038)http://127.0.0.1:50269/SourceCode.html -->
+<html data-brackets-id="4073"><head data-brackets-id="4074"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title data-brackets-id="4075">hCard Builder</title>
+    
+    <link data-brackets-id="4077" rel="stylesheet" href="./hCard Builder_files/main.css">
+    <link data-brackets-id="4078" href="./hCard Builder_files/css" rel="stylesheet">
+    <link data-brackets-id="4079" href="./hCard Builder_files/css(1)" rel="stylesheet">
+  </head>
+
+  <body data-brackets-id="4080">
+    
+    <div data-brackets-id="4081" class="container">
+      <div data-brackets-id="4082" class="content one">
+        <h1 data-brackets-id="4083">hCard Builder</h1>
+        <form data-brackets-id="4084" id="wrapper1">
+          <div data-brackets-id="4085" class="border">
+            <h2 data-brackets-id="4086">PERSONAL DETAILS</h2>
+          </div>
+          <div data-brackets-id="4087" class="wrapperleft" id="name">
+            <strong data-brackets-id="4088">GIVEN NAME</strong>
+            <input data-brackets-id="4089" type="text" name="name" maxlength="10" id="inpname" oninput="UIController.cardDisplay(&#39;inpname&#39;)">
+          </div>
+          
+          <div data-brackets-id="4090" class="wrapperright" id="surname" maxlength="15">
+            <strong data-brackets-id="4091">SURNAME</strong>
+            <input data-brackets-id="4092" type="text" name="surname" id="inpsurname" oninput="UIController.cardDisplay(&#39;inpsurname&#39;)">
+          </div>
+          
+          <div data-brackets-id="4093" class="wrapperleft" id="email">
+            <strong data-brackets-id="4094">EMAIL</strong>
+            <input data-brackets-id="4095" type="text" name="email" id="inpemail" oninput="UIController.cardDisplay(&#39;inpemail&#39;)" maxlength="40">
+          </div>
+          
+          <div data-brackets-id="4096" class="wrapperright" id="ph">
+            <strong data-brackets-id="4097">PHONE NUMBER</strong>
+            <input data-brackets-id="4098" type="number" name="ph" id="inpph" oninput="UIController.cardDisplay(&#39;inpph&#39;)">
+          </div>
+          
+        </form>
+        
+
+        
+        <form data-brackets-id="4099" id="wrapper2">
+          <div data-brackets-id="4100" class="border">
+            <h2 data-brackets-id="4101">ADDRESS</h2>
+          </div>
+          <div data-brackets-id="4102" class="wrapperleft" id="housename">
+            <strong data-brackets-id="4103">HOUSE NAME OR #</strong>
+            <input data-brackets-id="4104" type="text" name="housename" id="inphouse" oninput="UIController.cardDisplay(&#39;inphouse&#39;)" maxlength="6">
+          </div>
+
+          <div data-brackets-id="4105" class="wrapperright" id="street">
+            <strong data-brackets-id="4106">STREET</strong>
+            <input data-brackets-id="4107" type="text" name="street" id="inpstreet" oninput="UIController.cardDisplay(&#39;inpstreet&#39;)" maxlength="20">
+          </div>
+
+          <div data-brackets-id="4108" class="wrapperleft" id="suburb">
+            <strong data-brackets-id="4109">SUBURB</strong>
+            <input data-brackets-id="4110" type="text" name="suburb" id="inpsuburb" oninput="UIController.cardDisplay(&#39;inpsuburb&#39;)" maxlength="15">
+          </div>
+
+          <div data-brackets-id="4111" class="wrapperright" id="state">
+            <strong data-brackets-id="4112">STATE</strong>
+            <input data-brackets-id="4113" type="text" name="state" id="inpstate" oninput="UIController.cardDisplay(&#39;inpstate&#39;)" maxlength="5">
+          </div>
+
+          <div data-brackets-id="4114" class="wrapperleft" id="postcode">
+            <strong data-brackets-id="4115">POSTCODE</strong>
+            <input data-brackets-id="4116" type="text" name="postcode" id="inppostcode" oninput="UIController.cardDisplay(&#39;inppostcode&#39;)" maxlength="4">
+          </div>
+
+          <div data-brackets-id="4117" class="wrapperright" id="country">
+            <strong data-brackets-id="4118">COUNTRY</strong>
+            <input data-brackets-id="4119" type="text" name="country" id="inpcountry" oninput="UIController.cardDisplay(&#39;inpcountry&#39;)" maxlength="15">
+          </div>
+
+        </form>
+        <div data-brackets-id="4120" style="height: 0px; overflow: hidden">
+          <input data-brackets-id="4121" onchange="UIController.uploadImage()" type="file" id="imgPicker" name="imgPicker">
+        </div>
+        <button data-brackets-id="4122" class="btn1" type="button" onclick="UIController.uploadImage()"><strong data-brackets-id="4123">Upload Avatar</strong></button>
+        <button data-brackets-id="4124" class="btn2" type="button"><strong data-brackets-id="4125">Create hCard</strong></button>
+      </div>
+      <div data-brackets-id="4126" class="content two">
+        <div data-brackets-id="4127" id="cardwrap">
+          <h2 data-brackets-id="4128" id="preview">HCARD PREVIEW</h2>
+          <div data-brackets-id="4129" id="card">
+            <div data-brackets-id="4130" id="previewtitle">
+              <div data-brackets-id="4131" class="title" id="inpnamedisp">Shai</div><div data-brackets-id="4132" class="title" id="inpsurnamedisp">Alaloof</div>
+            </div>
+            <img data-brackets-id="4133" id="profilepic" src="./hCard Builder_files/profilepictemplate.png" alt="template" width="100px" height="100px">
+            <div data-brackets-id="4134" id="h2wrap">
+              <h2 data-brackets-id="4135" class="cardtitle">EMAIL<div data-brackets-id="4136" class="filltext" id="inpemaildisp"></div></h2>
+              <h2 data-brackets-id="4137" class="cardtitle">PHONE<div data-brackets-id="4138" class="filltext" id="inpphdisp"></div></h2>
+              <h2 data-brackets-id="4139" class="cardtitle">ADDRESS<div data-brackets-id="4140" class="filltext" id="inphousedisp"></div><div data-brackets-id="4141" class="filltext" id="inpstreetdisp"></div></h2>
+              <h2 data-brackets-id="4142" class="cardtitle"><div data-brackets-id="4143" class="filltext" id="inpadressdisp2"><div data-brackets-id="4144" class="filltext" id="inpsuburbdisp"></div><div data-brackets-id="4145" class="filltext" id="inpstatedisp"></div></div></h2>
+              <div data-brackets-id="4146" id="foo">
+                <h2 data-brackets-id="4147" class="cardtitle last">POSTCODE<div data-brackets-id="4148" class="filltext" id="inppostcodedisp"></div></h2>
+                <h2 data-brackets-id="4149" class="cardtitle last" id="count">COUNTRY<div data-brackets-id="4150" class="filltext" id="inpcountrydisp"></div></h2>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script data-brackets-id="4151" src="./hCard Builder_files/app.js"></script>
+  
+
+<div class="__brackets-ld-highlight" style="left: 610px; top: 147px; z-index: 2000000; margin: 0px; padding: 0px; position: absolute; pointer-events: none; box-shadow: rgb(255, 255, 255) 0px 0px 1px; box-sizing: content-box; border-width: 0px; border-style: none; border-color: rgba(21, 165, 255, 0.85); transform: none; transform-origin: 0px 0px 0px; background-color: rgba(0, 162, 255, 0); opacity: 0.6;"><div style="background-color: rgba(21, 165, 255, 0.58); height: 0px; left: 0px; top: 0px; position: absolute; display: none; transform: none;"></div><div style="background-color: rgba(21, 165, 255, 0.58); width: 0px; top: 0px; right: 0px; position: absolute; display: none; transform: none;"></div><div style="background-color: rgba(21, 165, 255, 0.58); height: 0px; left: 0px; bottom: 0px; position: absolute; display: none; transform: none;"></div><div style="background-color: rgba(21, 165, 255, 0.58); width: 10px; top: 0px; left: -10px; position: absolute; display: block; transform: none;"></div><div style="border-width: 1px; border-style: dashed; border-color: rgba(0, 162, 255, 0.5); height: 0px; left: 0px; top: 0px; position: absolute; display: none; transform: none;"></div><div style="border-width: 1px; border-style: dashed; border-color: rgba(0, 162, 255, 0.5); width: 0px; top: 0px; right: 0px; position: absolute; display: none; transform: none;"></div><div style="border-width: 1px; border-style: dashed; border-color: rgba(0, 162, 255, 0.5); height: 0px; left: 0px; bottom: 0px; position: absolute; display: none; transform: none;"></div><div style="border-width: 1px; border-style: dashed; border-color: rgba(0, 162, 255, 0.5); width: 0px; top: 0px; left: 0px; position: absolute; display: none; transform: none;"></div></div><div class="__brackets-ld-highlight" style="left: 652px; top: 147px; z-index: 2000000; margin: 0px; padding: 0px; position: absolute; pointer-events: none; box-shadow: rgb(255, 255, 255) 0px 0px 1px; box-sizing: content-box; border-width: 0px; border-style: none; border-color: rgba(21, 165, 255, 0.85); transform: none; transform-origin: 0px 0px 0px; background-color: rgba(0, 162, 255, 0); opacity: 0.6;"><div style="background-color: rgba(21, 165, 255, 0.58); height: 0px; left: 0px; top: 0px; position: absolute; display: none; transform: none;"></div><div style="background-color: rgba(21, 165, 255, 0.58); width: 0px; top: 0px; right: 0px; position: absolute; display: none; transform: none;"></div><div style="background-color: rgba(21, 165, 255, 0.58); height: 0px; left: 0px; bottom: 0px; position: absolute; display: none; transform: none;"></div><div style="background-color: rgba(21, 165, 255, 0.58); width: 5px; top: 0px; left: -5px; position: absolute; display: block; transform: none;"></div><div style="border-width: 1px; border-style: dashed; border-color: rgba(0, 162, 255, 0.5); height: 0px; left: 0px; top: 0px; position: absolute; display: none; transform: none;"></div><div style="border-width: 1px; border-style: dashed; border-color: rgba(0, 162, 255, 0.5); width: 0px; top: 0px; right: 0px; position: absolute; display: none; transform: none;"></div><div style="border-width: 1px; border-style: dashed; border-color: rgba(0, 162, 255, 0.5); height: 0px; left: 0px; bottom: 0px; position: absolute; display: none; transform: none;"></div><div style="border-width: 1px; border-style: dashed; border-color: rgba(0, 162, 255, 0.5); width: 0px; top: 0px; left: 0px; position: absolute; display: none; transform: none;"></div></div></body></html>
