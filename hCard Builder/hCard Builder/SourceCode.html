@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>hCard Builder</title>
+    <meta charset="utf-8" lang="en">
+    <link rel="stylesheet" href="main.css">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans|PT+Sans" rel="stylesheet">
+  </head>
+
+  <body>
+    
+    <div class="container">
+      <div class="content one">
+        <h1>hCard Builder</h1>
+        <form class="wrapper">
+          <div class="border">
+            <h2>PERSONAL DETAILS</h2>
+          </div>
+          <div class="wrapperleft" id="name">
+            <strong>GIVEN NAME</strong>
+            <input type="text" name="name" maxlength="10" id="inpname" oninput="UIController.cardDisplay('inpname')">
+          </div>
+          
+          <div class="wrapperright" id="surname" maxlength="15">
+            <strong>SURNAME</strong>
+            <input type="text" name="surname" id="inpsurname" oninput="UIController.cardDisplay('inpsurname')">
+          </div>
+          
+          <div class="wrapperleft" id="email">
+            <strong>EMAIL</strong>
+            <input type="text" name="email" id="inpemail" oninput="UIController.cardDisplay('inpemail')" maxlength="40">
+          </div>
+          
+          <div class="wrapperright" id="ph">
+            <strong>PHONE NUMBER</strong>
+            <input type="number" name="ph" id="inpph" oninput="UIController.cardDisplay('inpph')">
+          </div>
+          
+        </form>
+        
+
+        
+        <form class="wrapper">
+          <div class="border">
+            <h2>ADDRESS</h2>
+          </div>
+          <div class="wrapperleft" id="housename">
+            <strong>HOUSE NAME OR #</strong>
+            <input type="text" name="housename" id="inphouse" oninput="UIController.cardDisplay('inphouse')" maxlength="6">
+          </div>
+
+          <div class="wrapperright" id="street">
+            <strong>STREET</strong>
+            <input type="text" name="street" id="inpstreet" oninput="UIController.cardDisplay('inpstreet')" maxlength="20">
+          </div>
+
+          <div class="wrapperleft" id="suburb">
+            <strong>SUBURB</strong>
+            <input type="text" name="suburb" id="inpsuburb" oninput="UIController.cardDisplay('inpsuburb')" maxlength="15">
+          </div>
+
+          <div class="wrapperright" id="state">
+            <strong>STATE</strong>
+            <input type="text" name="state" id="inpstate" oninput="UIController.cardDisplay('inpstate')" maxlength="5">
+          </div>
+
+          <div class="wrapperleft" id="postcode">
+            <strong>POSTCODE</strong>
+            <input type="text" name="postcode" id="inppostcode" oninput="UIController.cardDisplay('inppostcode')" maxlength="4">
+          </div>
+
+          <div class="wrapperright" id="country">
+            <strong>COUNTRY</strong>
+            <input type="text" name="country" id="inpcountry" oninput="UIController.cardDisplay('inpcountry')" maxlength="15">
+          </div>
+
+        </form>
+        <div style="height: 0px; overflow: hidden">
+          <input onchange="UIController.uploadImage()" type="file" id="imgPicker" name="imgPicker" />
+        </div>
+        <button class="btn1" type="button" onclick="UIController.uploadImage()"><strong>Upload Avatar</strong></button>
+        <button class="btn2" type="button"><strong>Create hCard</strong></button>
+      </div>
+      <div class="content two">
+        <div id="cardwrap">
+          <h2 id="preview">HCARD PREVIEW</h2>
+          <div id="card">
+            <div id="previewtitle">
+              <div class="title" id="inpnamedisp"></div><div class="title" id="inpsurnamedisp"></div>
+            </div>
+            <img id="profilepic" src="profilepictemplate.png" alt="template" width="100px" height="100px">
+            <div id="h2wrap">
+              <h2 class="cardtitle">EMAIL<div class="filltext" id="inpemaildisp"></div></h2>
+              <h2 class="cardtitle">PHONE<div class="filltext" id="inpphdisp"></div></h2>
+              <h2 class="cardtitle">ADDRESS<div class="filltext" id="inphousedisp"></div><div class="filltext" id="inpstreetdisp"></div></h2>
+              <h2 class="cardtitle"><div class="filltext" id="inpadressdisp2"><div class="filltext" id="inpsuburbdisp"></div><div class="filltext" id="inpstatedisp"></div></div></h2>
+              <div id="foo">
+                <h2 class="cardtitle last">POSTCODE<div class="filltext" id="inppostcodedisp"></div></h2>
+                <h2 class="cardtitle last" id="count">COUNTRY<div class="filltext" id="inpcountrydisp"></div></h2>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+
+</html>
